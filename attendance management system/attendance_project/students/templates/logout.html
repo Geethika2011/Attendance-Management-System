@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logout Success</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-image: url("https://static.vecteezy.com/system/resources/previews/035/675/462/non_2x/abstract-lilac-background-with-leaves-and-flowers-vector.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .logout-box {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px 60px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .logout-box h1 {
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    .logout-box i {
+      color: green;
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .logout-box {
+        padding: 20px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logout-box">
+    <i class="fas fa-check-circle"></i>
+    <h1>Logout Successful!</h1>
+    <p>Thank you for visiting. You’ve been logged out safely.</p>
+  </div>
+
+</body>
+</html>

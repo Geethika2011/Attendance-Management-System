@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance System</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'students/style.css' %}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f8e8f1, #e0f7fa);
+            margin: 0;
+            padding: 0;
+            color: #4b4453;
+        }
+
+        header {
+            background-color: #d7bce8;
+            color: #4a148c;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 960px;
+            margin: 40px auto;
+            background-color: #fff0f6;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        a {
+            color: #8e24aa;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            background-color: #ba68c8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #ab47bc;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 12px;
+            border-bottom: 1px solid #e1bee7;
+            background-color: #fce4ec;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: 1px solid #ce93d8;
+            border-radius: 8px;
+            background-color: #fefaff;
+        }
+
+        button {
+            padding: 10px 18px;
+            background-color: #9575cd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background-color: #bcb6c6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attendance Management System</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

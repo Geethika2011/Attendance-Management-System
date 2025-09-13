@@ -1,0 +1,42 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          background-image:url("https://static.vecteezy.com/system/resources/previews/016/291/292/non_2x/aesthetic-background-frame-with-pastel-color-blob-and-leaves-abstract-template-vector.jpg");
+          background-repeat:no-repeat;
+          background-position: center;
+          background-size:cover;
+          height:100vh;
+          margin:0;
+        }
+        form{
+           border:3px solid pink;
+           border-radius: 12px;
+           position:relative;
+           height: 200px;
+           width:350px;
+           top:250px;
+           
+        }
+
+
+        
+    </style>
+
+</head>
+<body>
+    <center>
+    <form method="POST">
+        <P>LOGIN FORM</P>
+        {{form.as_p}}
+        <input type="SUBMIT">
+        {% csrf_token %}
+    </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 style="color: #5D6D7E;">Attendance Records</h2>
+<a href="{% url 'attendance_create' %}" style="display: inline-block; padding: 8px 12px; background-color: #AED6F1; color: #1B4F72; text-decoration: none; border-radius: 5px; margin-bottom: 10px;">➕ Add Attendance</a>
+
+<table style="width: 100%; border-collapse: collapse; font-family: 'Segoe UI', sans-serif;">
+    <thead>
+        <tr style="background-color: #D6EAF8; color: #154360;">
+            <th style="padding: 10px; border: 1px solid #AED6F1;">Student Name</th>
+            <th style="padding: 10px; border: 1px solid #AED6F1;">Date</th>
+            <th style="padding: 10px; border: 1px solid #AED6F1;">Status</th>
+            <th style="padding: 10px; border: 1px solid #AED6F1;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr style="background-color: #FDEDEC; color: #633974;">
+            <td style="padding: 10px; border: 1px solid #F5B7B1;">{{ record.student.name }}</td>
+            <td style="padding: 10px; border: 1px solid #F5B7B1;">{{ record.date }}</td>
+            <td style="padding: 10px; border: 1px solid #F5B7B1;">{{ record.status }}</td>
+            <td style="padding: 10px; border: 1px solid #F5B7B1;">
+                <a href="{% url 'attendance_update' record.id %}" style="color: #2874A6; text-decoration: none;">✏️ Edit</a> |
+                <a href="{% url 'attendance_delete' record.id %}" style="color: #C0392B; text-decoration: none;">🗑️ Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4" style="text-align: center; padding: 10px; color: #999;">No attendance records found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
